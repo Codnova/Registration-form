@@ -12,10 +12,29 @@
 					<label for="first-name" >Enter Your First Name: <input required type="text" id="first-name"></label>
 					<label for="last-name">Enter Your Last Name: <input required type="text" id="last-name"></label>
 					<label for="email">Enter Your Email: <input required type="email" id="email"></label>
-					<label for="new-password">Create a New Password: <input required minlength="8" type="password" id="new-password"></label>
+					<label for="new-password">Create a New Password: <input required pattern="[a-z0-5]{8,}" type="password" id="new-password"></label>
 				</fieldset>
-				<fieldset></fieldset>
-				<fieldset></fieldset>
+				<fieldset>
+					<label for="personal-account"> <input type="radio" name="account-type" id="personal-account"> Personal Account</label>  <!--When you give the same name attribute to both radio buttons you can only click on one at the same time-->
+					<label for="business-account"> <input type="radio" name="account-type" id="business-account"> Business Account</label>
+					<label for="terms-and-conditions"> <input type="checkbox" required id="terms-and-conditions"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+				</fieldset>
+				<fieldset>
+					<label for="profile-picture"> <input name="file" type="file" id="profile-picture">Upload a profile picture: </label>
+					<label for="age"> <input name="age" type="number" min="13" max="120" id="age">Input your age (years): </label>
+					<label for="referrer"> How did you hear about us?
+						<select name="dropdown-menu" id="referrer">
+							<option value="">(select one)</option>
+							<option value="1">freeCodeCamp News</option>
+							<option value="2">freeCodeCamp YouTube Channel</option>
+							<option value="3">freeCodeCamp Forum</option>
+							<option value="4">Other</option>
+						</select>
+					</label>
+					<label for="bio"> Provide a bio:
+						<textarea name="bio-text" id="bio" cols="30" rows="3" placeholder="I like coding on the beach..."></textarea>
+					</label>
+				</fieldset>
 				<input type="submit" value="Submit">
 			</form>
 		</body>
